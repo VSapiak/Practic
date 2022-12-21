@@ -1,0 +1,611 @@
+:root {
+    --color-iris: #4D5AE5;
+    --color-iris_second: #404BBF;
+    --color-cornflower: #E7E9FC;
+    --color-cloud: #F4F4FD;
+    --color-white: #FFFFFF;
+    --color-blue: #6394ef;
+
+    --taming-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #2E2F42;
+    background-color: var(--color-blue);
+    margin: 0;
+    ;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.btn-list {
+    cursor: pointer;
+    background-color: var(--color-iris);
+    border-radius: 4px;
+    border-color: transparent;
+    color: whitesmoke;
+    padding: 8px 25px;
+    margin-right: 20px;
+}
+
+.btn-list:hover,
+.btn-list:focus {
+    background-color: var(--color-iris_second);
+}
+
+.btn-list:active {
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.container-prefix {}
+
+.btn-prefix {
+    cursor: pointer;
+    background-color: var(--color-iris);
+    border-radius: 4px;
+    border-color: transparent;
+    color: whitesmoke;
+    padding: 8px 25px;
+    margin-right: 20px;
+}
+
+.btn-prefix:hover,
+.btn-prefix:focus {
+    background-color: var(--color-iris_second);
+}
+
+.btn-prefix:active {
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.container-form {}
+
+.btn-form {
+    cursor: pointer;
+    background-color: var(--color-iris);
+    border-radius: 4px;
+    border-color: transparent;
+    color: whitesmoke;
+    padding: 8px 25px;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+    background-color: var(--color-iris_second);
+}
+
+.btn-form:active {
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+
+
+/* Modal Window */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms var(--taming-function);
+
+    width: 408px;
+
+
+    background-color: var(--color-cloud);
+    border-radius: 4px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.button-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-image: url('../img/to_close_modal.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+
+    transition: background-color 250ms var(--taming-function),
+        box-shadow 250ms var(--taming-function)
+}
+
+.button-modal:active {
+    background-color: var(--color-cornflower);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.container-form-call {
+    width: 100%;
+}
+
+.form-field {
+    position: relative;
+}
+
+.svg-icon-form-name {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(50%);
+    width: 12px;
+    height: 12px;
+}
+
+
+.svg-icon-form-phone {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(50%);
+    width: 13px;
+    height: 13px;
+}
+
+.svg-icon-form-email {
+    position: absolute;
+    top: 50%;
+    left: 17.5px;
+    transform: translateY(50%);
+    width: 15px;
+    height: 12px;
+}
+
+.subtitle-text-form {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: inherit;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+
+    margin-top: 72px;
+    margin-bottom: 16px;
+}
+
+.forms {
+    width: 360px;
+    margin: 0 auto;
+}
+
+.text-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--color-helper);
+
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.sphere-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    ;
+    border-radius: 4px;
+
+    padding: 0;
+    padding-left: 34px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+}
+
+
+.sphere-input:focus {
+    border: 1px solid var(--color-iris);
+}
+
+.sphere-input:focus+.svg-icon-form-name {
+    fill: var(--color-iris);
+}
+
+.sphere-input:focus+.svg-icon-form-phone {
+    fill: var(--color-iris);
+}
+
+.sphere-input:focus+.svg-icon-form-email {
+    fill: var(--color-iris);
+}
+
+.textarea-form {
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    padding-top: 8px;
+    padding-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+
+.textarea-form:placeholder-shown {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea-form:focus {
+    border: 1px solid var(--color-iris);
+}
+
+.from-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+
+.icon-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+}
+
+.from-checkbox:checked+.icon-checkbox {
+    border-color: transparent;
+    background-color: var(--color-iris);
+    background-image: url('../img/fio.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+}
+
+.text-form {
+    font-size: 12px;
+    line-height: 1.333333;
+    letter-spacing: 0.04em;
+    color: var(--color-helpir);
+}
+
+.text-privacy {
+    color: var(--color-iris);
+    text-decoration: none;
+}
+
+
+.button-form {
+    cursor: pointer;
+    width: 170px;
+    height: 51px;
+    background-color: var(--color-iris);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    color: var(--color-white);
+
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+    transition: background-color 250ms var(--taming-function),
+        box-shadow 250ms var(--taming-function)
+}
+
+.button-form:focus,
+.button-form:active {
+    background-color: var(--color-iris_second);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+/*----------------- Toto List--------------- */
+.modal-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+}
+
+.modal-list.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-list.is-hidden .modal-todo {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-todo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms var(--taming-function);
+
+    width: 60%;
+    height: 50%;
+
+    background-color: #E7E9FC;
+    border-radius: 20px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-modal-todo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-image: url('../img/to_close_modal.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+
+    transition: background-color 250ms var(--taming-function),
+        box-shadow 250ms var(--taming-function)
+}
+
+.button-modal-todo:active {
+    background-color: var(--color-cornflower);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.title-modal-todo {
+    text-align: center;
+    color: #2E2F42;
+    padding-top: 26px;
+    padding-bottom: 25px;
+}
+
+.input-container {
+    text-align: center;
+}
+
+.input-todo {
+    width: 400px;
+    height: 25px;
+    border-radius: 3px;
+    border-color: transparent;
+}
+.btn-todo {
+    cursor: pointer;
+    height: 25px;
+    border-color: transparent;
+    background-color: #4e87f0;
+    color: var(--color-cloud);
+    border-radius: 3px;
+
+    transition: background-color 250ms var(--taming-function);
+}
+
+.btn-todo:hover,
+.btn-todo:focus {
+    background-color: #4079e4;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.btn-todo:active {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.todo-list {
+    width: 480px;
+    padding-top: 25px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.todo-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.todo-list-item button{
+    background-color: #1661ec;
+    border-radius: 3px;
+    border-color: transparent;
+    color: #F4F4FD;
+    
+    transition: background-color 250ms var(--taming-function),
+    box-shadow 250ms var(--taming-function);
+}
+
+.todo-list-item button:hover,
+.todo-list-item button:focus {
+    background-color: #256cf0;
+}
+
+.todo-list-item button:active {
+    background-color: #1650bd;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+ /* Register */
+
+.backdrop-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop-register.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop-register.is-hidden .modal-register {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 250ms var(--taming-function);
+
+    width: 500px;
+    height: 600px;
+
+    background-color: #e6e6f7;
+    border-radius: 10px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.button-modal-register {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-image: url('../img/to_close_modal.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+
+    transition: background-color 250ms var(--taming-function),
+        box-shadow 250ms var(--taming-function)
+}
+
+.button-modal-register:active {
+    background-color: var(--color-cornflower);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+form {
+    width: 300px;
+
+}
+
+.form__group {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+.input.error {
+    border-color: red;
+}
+
+.input::placeholder {
+    color: #ccc;
+}
+
+.checkbox__label {
+    user-select: none;
+}
+
+.checkbox__input.error + .checkbox__label {
+    color: red;
+}
+
+.btn-form-page {
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e335e;
+    border: 0;
+    width: 100%;
+    outline: 0;
+    cursor: pointer;
+    color: #fff;
+}

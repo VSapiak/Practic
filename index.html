@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="conteiner-call_back">
+            <button type="button" class="btn-list btn" data-modal-open>Call you back</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="button-modal" data-modal-close>
+                    </button>
+
+                    <div class="container-form-call">
+                        <h2 class="subtitle-text-form">Leave your contacts and we will call you back</h2>
+
+
+                        <div class="container-form">
+                            <form class="forms" action="">
+
+                                <div class="form-field">
+                                    <label class="text-label" for="">
+                                        Name
+                                        <input class="sphere-input name-input" type="text" name="name" id="name"
+                                            required placeholder="Ivan Ivanovich">
+                                        <svg class="svg-icon-form-name">
+                                            <use href="./img/symbol-defs-modal.svg#icon-name"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="form-field">
+                                    <label class="text-label" for="">
+                                        Phone
+                                        <input class="sphere-input phone-input" type="tel" name="phone_number"
+                                            id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                            title="380-000-00-00" placeholder="+38-000-000-00">
+                                        <svg class="svg-icon-form-phone">
+                                            <use href="./img/symbol-defs-modal.svg#icon-phone"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="form-field">
+                                    <label class="text-label" for="">
+                                        Email
+                                        <input class="sphere-input email-input" type="email" name="email" id="email"
+                                            placeholder="Email@gmail.com">
+                                        <svg class="svg-icon-form-email">
+                                            <use href="./img/symbol-defs-modal.svg#icon-email"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <div class="form-field">
+                                    <label class="text-label" for="">
+                                        Comment
+                                        <textarea class="textarea-form" name="feedback"
+                                            placeholder="Text input..."></textarea>
+                                    </label>
+                                </div>
+                                <div class="forn-chexbox">
+                                    <label class="label">
+                                        <input class="from-checkbox" type="checkbox" name="user-policy" value="html"
+                                            required>
+                                        <span class="icon-checkbox"></span>
+                                        <p class="text-form">I accept the terms and conditions of the <a
+                                                class="text-privacy" href="">Privacy Policy</a></p>
+                                    </label>
+                                    <button class="button-form" type="submit">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container-register">
+            <button type="button" class="btn-prefix btn" data-modal-open-register>Register</button>
+            <div class="backdrop-register is-hidden" data-modal-register>
+                <div class="modal-register">
+                    <button class="button-modal-register" data-modal-close-register></button>
+
+                    <div class="page">
+                        <form class="js-form" action="" novalidate>
+                            <div class="form__group">
+                                <input type="text" class="input js-input" name="name" placeholder="Name">
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="input js-input" name="last name" placeholder="Last name">
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="input js-input js-input-email" name="email"
+                                    placeholder="Email">
+                            </div>
+                            <div class="form__group">
+                                <input type="tel" class="input js-input js-input-phone" name="phone"
+                                    placeholder="Phone">
+                            </div>
+                            <div class="form__group">
+                                <input type="checkbox" class="checkbox__input js-input-checkbox" id="privacy_check">
+                                <label class="checkbox__label" for="privacy_check">Accept privacy policy</label>
+                            </div>
+                            <button class="btn-form-page" type="submit">
+                                Submit form
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <div class="container-todo">
+            <button type="button" class="btn-list btn" data-modal-open-window>Todo List</button>
+            <div class="modal-list is-hidden" data-modal-window>
+                <div class="modal-todo">
+                    <button class="button-modal-todo" data-modal-close-window></button>
+
+                    <h1 class="title-modal-todo">Todo List</h1>
+                    <div class="input-container">
+                        <input class="input-todo" type="text">
+                        <button class="btn-todo">
+                            Add Task
+                        </button>
+                    </div>
+                    <ul class="todo-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/modal-window-todo.js"></script>
+
+    <script src="./js/modal-register.js"></script>
+
+    <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>
